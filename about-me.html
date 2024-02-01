@@ -58,7 +58,7 @@
         </nav>
     </header> <!-- Header ends here! -->
 
-    <section class="about-me"> <!-- Section who-i-was begins here! -->
+    <section class="about-me-before" id="top-back"> <!-- Section who-i-was begins here! -->
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -98,7 +98,7 @@
         </div>
     </section> <!-- Section who-i-was ends here! -->
 
-    <section class="about-me"> <!-- Section who-i-am begins here! -->
+    <section class="about-me-now"> <!-- Section who-i-am begins here! -->
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -143,10 +143,70 @@
         </div>
     </section> <!-- Section who-i-am ends here! -->
 
+    <section class="box"> <!-- Section trivia begins here! -->
+        <div class="container">
+            <h2 class="align-self-center">
+                Trivia
+            </h2>
+          <div class="row">
+            <div class="col-md-4">
+              <img src="img/karate-me.png" alt="karate-me" class="img-fluid" width="334" height="175">
+              <h4>
+                Karate Practitioner
+              </h4>
+              <p class="text-justify">
+                I am a 4th kyu in Shotokan Karate, certified by SKIF Brazil. Martial arts are a hobby and a tool for humility, respect
+                for others, health, and strengthening ethical values. Karate aims to restrain aggressive impulses and instill patience
+                in us.
+              </p>
+            </div>
+            <div class="col-md-4">
+              <img src="img/me-author.png" alt="me-author" class="img-fluid" width="334" height="175">
+              <h4>
+                I am a book author, did you know?
+              </h4>
+              <p class="text-justify">
+                Literature is a personal passion! In addition to being an avid reader, I enjoy writing and started a few books when I
+                was 14 years old. It's still a work in progress, but slowly I'm moving forward and bringing my writing dreams to life.
+                Check out my author page on Amazon if you'd like to learn more!
+              </p>
+              <a href="https://www.amazon.com/stores/Jo%C3%A3o-Paulo-M%C3%BCller/author/B0CTKRSB5L?ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true" class="btn btn-outline-warning ml-2" target="_blank">
+                <i class="fa-brands fa-amazon fa-lg">
+                </i>
+              </a>
+            </div>
+            <div class="col-md-4">
+              <img src="img/me-languages.png" alt="me-languages" class="img-fluid" width="334" height="175">
+              <h4>
+                I am a "lingvemulo!"
+              </h4>
+              <p class="text-justify">
+                Do you know what a 'lingvemulo' is? I imagine you don't, but it's a word in Esperanto that describes people like me:
+                someone with a inclination for languages. I love learning new languages! In addition to my personal passion for English,
+                I have been studying French, Chinese, and Dutch, and I have also had previous exposure to Arabic and Modern Hebrew.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section> <!-- Section trivia ends here! -->
+
+      <footer class="text-muted"> <!-- Footer begins here! -->
+          <div class="container">
+              <div class="row">
+                  <p>
+                      <a href="#top-back">Back to top</a>
+                      </p>
+              </div>
+              <div class="float-right">
+                <p>Shamslux's TechVault &copy; Shamslux 2024.</p>
+              </div>
+          </div>
+      </footer> <!-- Footer ends here! -->
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" 
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
@@ -154,6 +214,25 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-</body>
 
+    <!-- To the top effect -->
+    <script>
+        $(document).ready(function() {
+            $("a[href='#top-back']").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+    
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 1000, function() { // Removed easing function
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+    
+     
+</body>
 </html>

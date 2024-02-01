@@ -7,8 +7,15 @@
     font-weight: bold;
 }
 
-.about-me {
-    background-color: white;
+.about-me-before {
+    background-color: #FFDE59;
+    padding: 60px 0;
+    color: #5271FF;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.about-me-now {
+    background-color:white;
     padding: 60px 0;
     color: black;
     border-bottom: 1px solid #e5e5e5;
