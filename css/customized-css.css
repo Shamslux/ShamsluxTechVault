@@ -1,0 +1,27 @@
+.bg-navbar-custom {
+    background-color: #5271FF;}
+
+#home {
+    background-color: #FFDE59;
+    color: #5271FF;
+    font-weight: bold;
+}
+
+.about-me {
+    background-color: white;
+    padding: 60px 0;
+    color: black;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.warning {
+    background-color: white;
+    color: black;
+    padding: 60px 0;
+    border: 1px solid #e5e5e5;
+}
+
+.box {
+	padding: 60px 0;
+	border-bottom: 1px solid #e5e5e5;
+}	
