@@ -1,0 +1,174 @@
+/* It cleans standard formats */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-size: 1em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: #e6e6e6;
+}
+
+/* Layout formats */
+
+#header-area {
+    background-color: #0e740e;
+    padding: 15px;
+    text-align: center;
+}
+
+#logo-area, #menu-area {
+    padding: 10px;
+}
+
+#main-area {
+    width: 920px;
+    margin: 0 auto;
+}
+
+#post-area {
+    width: 660px;
+    float: left;
+}
+
+#post-area a:link, #post-area a:visited {
+    color:#0e740e;
+}
+
+#post-area a:hover {
+    text-decoration: underline;
+}
+
+#side-menu-area {
+    width: 240px;
+    float: right;
+}
+
+.post {
+    padding: 20px;
+    margin-bottom: 20px;
+    background: white;
+}
+
+.post-image {
+    width: 600px;
+    padding: 10px;
+}
+
+
+#footer {
+    clear: left;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    background: #0e740e;
+}
+
+/* Menu formats */
+
+#header-area a:link, #header-area a:visited {
+    color: #fff;
+    padding: 8px 12px;
+}
+
+#header-area a:hover {
+    color: #0e740e;
+    background: white;
+}
+
+/* Side Menu Formats */
+
+#side-menu-content {
+    padding-top: 15px;
+    text-align: center;
+}
+
+#side-menu-content h4 {
+    background: black;
+}
+
+#social-media {
+    padding-top: 5px;
+    background: #e6e6e6;
+}
+
+.social-media-icons {
+    width: 25px;
+    height: 25px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+}
+
+.social-media-icons:hover {
+    filter: grayscale(0%);
+}
+
+/* Gallery Formats */
+
+.gallery-frame-1 {
+    float: left;
+    width: 440px;
+    margin: 3px;
+    /* border: 1px solid red */
+}  
+
+.gallery-pic {
+    width: 440px;
+    height: 260px;
+}
+
+/* PlantPedia Formats */
+
+
+.pedia-container-icon {
+    width: 100px;
+    height: 100px;
+    /* border: 1px solid red; */
+    margin: 10px;
+    float: left;
+    background-color: rgb(196, 235, 196);
+}
+
+.pedia-container-content {
+    width: 300px;
+    height: auto;
+    /* border: 1px solid red; */
+    margin: 10px;
+    float: left;
+    background: white;
+    padding: 5px;
+}
+
+.pedia-container-content h2 {
+    color: #0e740e;
+    margin-bottom: 5px;
+}
+
+/* General formats */
+
+h1 {
+    color: #3af043;
+    font-size: 2.5em;
+}
+
+.white {
+    color: white;
+}
+
+h2 {
+    color: #0e740e;
+}
+
+a {
+    text-decoration: none;
+}
+
+.post-date {
+    font-size: 0.8em;
+    border-bottom: 2px solid #f4f4f4;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+}

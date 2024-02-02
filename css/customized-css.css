@@ -33,6 +33,14 @@
 	border-bottom: 1px solid #e5e5e5;
 }	
 
+.blockquote {
+  margin-bottom: 1px; 
+}
+
+.blockquote:first-child {
+  margin-top: 20px; 
+}
+
 :root {
     --jumbotron-padding-y: 3rem;
   }
