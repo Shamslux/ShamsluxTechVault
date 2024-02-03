@@ -41,6 +41,12 @@
   margin-top: 20px; 
 }
 
+.card-img-top {
+  height: 200px; 
+  object-fit: cover; 
+  width: 100%; 
+}
+
 :root {
     --jumbotron-padding-y: 3rem;
   }
