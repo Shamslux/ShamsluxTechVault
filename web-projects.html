@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -12,14 +12,21 @@
     <!-- Customized CSS -->
     <link rel="stylesheet" href="css/customized-css.css">
 
-    <!-- Font awsesome link -->
+    <!-- Font Awesome link -->
     <script src="https://kit.fontawesome.com/d4b2501713.js" crossorigin="anonymous"></script>
 
     <title>Shamslux's TechVault - WebDev Projects</title>
 </head>
 
 <body>
-    <header> <!-- Header begins here! -->
+    <div class="progress-container">
+        <!-- Progress bar begins here! -->
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+    <!-- Progress bar ends here! -->
+
+    <header>
+        <!-- Header begins here! -->
         <nav class="navbar navbar-expand-sm navbar-dark bg-navbar-custom">
             <div class="container">
                 <a href="index.html" class="navbar-brand">
@@ -32,13 +39,11 @@
                 </a>
 
                 <button class="navbar-toggler" data-toggle="collapse" data-target="#main-nav">
-                    <span class="navbar-toggler-icon">
-
-                    </span>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="main-nav">
-                    <ul class="navbar-nav  ml-auto">
+                    <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
                             <a href="index.html" class="nav-link">Home</a>
                         </li>
@@ -54,146 +59,165 @@
                     </ul>
                 </div>
             </div>
-
         </nav>
-    </header> <!-- Header ends here! -->
+    </header>
+    <!-- Header ends here! -->
 
-    <main role="main" id="top-back"> <!-- Main begins here! -->
-
+    <main role="main" id="top-back">
+        <!-- Main begins here! -->
         <section class="jumbotron text-center">
-          <div class="container">
-            <h1 class="jumbotron-heading">WebDev Projects</h1>
-            <p class="lead text-muted">
-                I always like to have a broad view of what I do. For example, when I was a teacher, even though I was in the field of
-                language and literature, I liked to have a general understanding of philosophy, history, psychology, sociology, etc.
-                Similarly, even though I am in the Data field today, I like to have a general view of other IT fields. In particular, I
-                have been studying Web Development as a hobby, and here are some projects.
-            </p>
-            <p>
-                 <a href="https://github.com/Shamslux/WebDevelopment" class="btn btn-primary my-2" target="_blank">
-                    <i class="fa-brands fa-github fa-lg"></i> To GitHub WebDev Repository
-                </a>       
-            </p>
-          </div>
+            <div class="container">
+                <h1 class="jumbotron-heading">WebDev Projects</h1>
+                <p class="lead text-muted">
+                    I always like to have a broad view of what I do. For example, when I was a teacher, even though I was
+                    in the field of language and literature, I liked to have a general understanding of philosophy,
+                    history, psychology, sociology, etc. Similarly, even though I am in the Data field today, I like to have
+                    a general view of other IT fields. In particular, I have been studying Web Development as a hobby, and
+                    here are some projects.
+                </p>
+                <p>
+                    <a href="https://github.com/Shamslux/WebDevelopment" class="btn btn-primary my-2" target="_blank">
+                        <i class="fa-brands fa-github fa-lg"></i> To GitHub WebDev Repository
+                    </a>
+                </p>
+            </div>
         </section>
-  
+
         <div class="album py-5 bg-light">
-          <div class="container">
-              <div class="row">
-              <div class="col-md-4"> <!-- A card begins here! -->
-                <div class="card mb-4 shadow-sm d-flex align-items-center justify-content-center">
-                  <img class="card-img-top img-fluid card-img-fixed-height" src="img/lentlog-thumb.png" alt="lentlog-project">
-                  <div class="card-body">
-                    <h4>
-                        1st Project - Lentlog
-                    </h4>
-                    <p class="card-text">
-                        This was my first project while learning web development. The website is created using only HTML5.
-                    </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <a href="web-dev-pages/first_project_html5/index.html" target="_blank" class="btn btn-sm btn-outline-secondary">
-                            <i class="fa-solid fa-globe fa-lg"></i> Access the page!
-                        </a>                        
-                      </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <!-- A card begins here! -->
+                        <div class="card mb-4 shadow-sm d-flex flex-column h-100">
+                            <img class="card-img-top img-fluid" src="img/lentlog-thumb.png" alt="lentlog-project">
+                            <div class="card-body d-flex flex-column justify-content-between">
+                                <h4>
+                                    1st Project - Lentlog
+                                </h4>
+                                <p class="card-text">
+                                    This was my first project while learning web development. The website is created using only
+                                    HTML5.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="web-dev-pages/first_project_html5/index.html" target="_blank"
+                                            class="btn btn-sm btn-outline-secondary">
+                                            <i class="fa-solid fa-globe fa-lg"></i> Access the page!
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-              </div> <!-- A card begins here! -->
+                    <!-- A card begins here! -->
 
-              <div class="col-md-4"> <!-- A card begins here! -->
-                <div class="card mb-4 shadow-sm d-flex align-items-center justify-content-center">
-                  <img class="card-img-top img-fluid card-img-fixed-height" src="img/khaire-thumb.png" alt="khaire-project">
-                  <div class="card-body">
-                    <h4>
-                        2nd Project - Khaire Inn
-                    </h4>
-                    <p class="card-text">
-                        The Khaire Inn was my second project, and in it, I used some notions of CSS3 for the first time.
-                    </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <a href="web-dev-pages/second_project_html5_css/index.html" target="_blank" class="btn btn-sm btn-outline-secondary">
-                            <i class="fa-solid fa-globe fa-lg"></i> Access the page!
-                        </a>                        
-                      </div>
+                    <div class="col-md-4 mb-4">
+                        <!-- A card begins here! -->
+                        <div class="card mb-4 shadow-sm d-flex flex-column h-100">
+                            <img class="card-img-top img-fluid" src="img/khaire-thumb.png" alt="khaire-project">
+                            <div class="card-body d-flex flex-column justify-content-between">
+                                <h4>
+                                    2nd Project - Khaire Inn
+                                </h4>
+                                <p class="card-text">
+                                    The Khaire Inn was my second project, and in it, I used some notions of CSS3 for the
+                                    first time.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="web-dev-pages/second_project_html5_css/index.html" target="_blank"
+                                            class="btn btn-sm btn-outline-secondary">
+                                            <i class="fa-solid fa-globe fa-lg"></i> Access the page!
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-              </div> <!-- A card ends here! -->
+                    <!-- A card ends here! -->
 
-              <div class="col-md-4"> <!-- A card begins here! -->
-                <div class="card mb-4 shadow-sm d-flex align-items-center justify-content-center">
-                  <img class="card-img-top img-fluid card-img-fixed-height" src="img/garden-thumb.png" alt="garden-project">
-                  <div class="card-body">
-                    <h4>
-                        3rd Project - Garden Blog Project
-                    </h4>
-                    <p class="card-text">
-                        New challenges with more use of HTML5 and CSS3, with new effects. </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <a href="web-dev-pages/third_project_html5_css/index.html" target="_blank" class="btn btn-sm btn-outline-secondary">
-                            <i class="fa-solid fa-globe fa-lg"></i> Access the page!
-                        </a>                        
-                      </div>
+                    <div class="col-md-4 mb-4">
+                        <!-- A card begins here! -->
+                        <div class="card mb-4 shadow-sm d-flex flex-column h-100">
+                            <img class="card-img-top img-fluid" src="img/garden-thumb.png" alt="garden-project">
+                            <div class="card-body d-flex flex-column justify-content-between">
+                                <h4>
+                                    3rd Project - Garden Blog Project
+                                </h4>
+                                <p class="card-text">
+                                    New challenges with more use of HTML5 and CSS3, with new effects.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="web-dev-pages/third_project_html5_css/index.html" target="_blank"
+                                            class="btn btn-sm btn-outline-secondary">
+                                            <i class="fa-solid fa-globe fa-lg"></i> Access the page!
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-              </div> <!-- A card ends here! -->
+                    <!-- A card ends here! -->
 
-              <div class="col-md-4"> <!-- A card begins here! -->
-                <div class="card mb-4 shadow-sm d-flex align-items-center justify-content-center">
-                  <img class="card-img-top img-fluid card-img-fixed-height" src="img/newspaper-thumb.png" alt="newspaper-project">
-                  <div class="card-body">
-                    <h4>
-                        4th Project - Local Newspaper
-                    </h4>
-                    <p class="card-text">
-                      A local online newspaper with neighborhood news. This project required intermediate knowledge of HTML5 and CSS3. </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <a href="web-dev-pages/fourth_project_intermediate_html5_css3/index.html" target="_blank" class="btn btn-sm btn-outline-secondary">
-                            <i class="fa-solid fa-globe fa-lg"></i> Access the page!
-                        </a>                        
-                      </div>
+                    <div class="col-md-4 mb-4">
+                        <!-- A card begins here! -->
+                        <div class="card mb-4 shadow-sm d-flex flex-column h-100">
+                            <img class="card-img-top img-fluid" src="img/newspaper-thumb.png"
+                                alt="newspaper-project">
+                            <div class="card-body d-flex flex-column justify-content-between">
+                                <h4>
+                                    4th Project - Local Newspaper
+                                </h4>
+                                <p class="card-text">
+                                    A local online newspaper with neighborhood news. This project required intermediate
+                                    knowledge of HTML5 and CSS3.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="web-dev-pages/fourth_project_intermediate_html5_css3/index.html"
+                                            target="_blank" class="btn btn-sm btn-outline-secondary">
+                                            <i class="fa-solid fa-globe fa-lg"></i> Access the page!
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-              </div> <!-- A card ends here! -->
+                    <!-- A card ends here! -->
 
-              <div class="col-md-4"> <!-- A card begins here! -->
-                <div class="card mb-4 shadow-sm d-flex align-items-center justify-content-center">
-                  <img class="card-img-top img-fluid card-img-fixed-height" src="img/finans-thumb.png" alt="finans-project">
-                  <div class="card-body">
-                    <h4>
-                        5th Project - Finans - Finance App
-                    </h4>
-                    <p class="card-text">
-                        Here I learned how to start using Bootstrap 4. This project aided my understanding to be able to use
-                        Bootstrap to create the website for the repository. </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <a href="web-dev-pages/fifth_project_bootstrap4/index.html" target="_blank" class="btn btn-sm btn-outline-secondary">
-                            <i class="fa-solid fa-globe fa-lg"></i> Access the page!
-                        </a>                        
-                      </div>
+                    <div class="col-md-4 mb-4">
+                        <!-- A card begins here! -->
+                        <div class="card mb-4 shadow-sm d-flex flex-column h-100">
+                            <img class="card-img-top img-fluid" src="img/finans-thumb.png" alt="finans-project">
+                            <div class="card-body d-flex flex-column justify-content-between">
+                                <h4>
+                                    5th Project - Finans - Finance App
+                                </h4>
+                                <p class="card-text">
+                                    Here I learned how to start using Bootstrap 4. This project aided my understanding to be
+                                    able to use Bootstrap to create the website for the repository.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="web-dev-pages/fifth_project_bootstrap4/index.html" target="_blank"
+                                            class="btn btn-sm btn-outline-secondary">
+                                            <i class="fa-solid fa-globe fa-lg"></i> Access the page!
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
+                    <!-- A card ends here! -->
                 </div>
-              </div> <!-- A card ends here! -->
-
-            </div> 
-
-
-
-           </div>
-          </div>
+            </div>
         </div>
-  
-      </main> <!-- Main ends here! -->
+    </main>
+    <!-- Main ends here! -->
 
-      <footer class="text-muted"> <!-- Footer begins here! -->
+    <footer class="text-muted">
+        <!-- Footer begins here! -->
         <div class="container">
             <div class="row">
                 <div class="col-md-6 d-flex align-items-center">
@@ -206,13 +230,13 @@
                 </div>
             </div>
         </div>
-      </footer> <!-- Footer ends here! -->
+    </footer>
+    <!-- Footer ends here! -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" 
-        crossorigin="anonymous"></script>
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
@@ -226,18 +250,19 @@
             $("a[href='#top-back']").on('click', function(event) {
                 if (this.hash !== "") {
                     event.preventDefault();
-    
+
                     var hash = this.hash;
                     $('html, body').animate({
                         scrollTop: $(hash).offset().top
-                    }, 1000, function() { // Removed easing function
+                    }, 1000, function() {
                         window.location.hash = hash;
                     });
                 }
             });
         });
     </script>
-    
-     
+    <!-- Progress bar! -->
+    <script src="js/shamslux.progress-bar.js"></script>
 </body>
+
 </html>
