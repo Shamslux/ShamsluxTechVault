@@ -37,6 +37,27 @@
   color: var(--text-color-light);
 }
 
+.job-showcase {
+  background-color: white;
+  color: var(--text-color-light);
+  padding: 25px;
+}
+
+.profile-links {
+  margin-top: 30px;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+}
+.profile-links .icon {
+  margin-top: 20px;
+}
+.profile-links h4 {
+  font-weight: bold;
+}
+.profile-links .row {
+  align-items: center;
+}
+
 .warning {
   background-color: white;
   color: var(--text-color-light);
