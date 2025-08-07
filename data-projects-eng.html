@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shamslux's TechVault</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-gray-950 shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index-eng.html" class="text-2xl font-bold text-yellow-400 hover:opacity-80 transition">Shamslux's <span class="text-white">Tech</span><span class="text-yellow-400">Vault</span></a>
+        <ul class="flex gap-6 text-sm font-medium">
+          <li><a href="index-eng.html"
+            class="relative text-gray-300 hover:text-yellow-400 transition duration-300
+                  after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-yellow-400
+                  after:left-0 after:bottom-[-4px] hover:after:w-full after:transition-all after:duration-300">
+            Home
+          </a></li>
+
+          <li><a href="about-me-eng.html"
+            class="relative text-gray-300 hover:text-yellow-400 transition duration-300
+                  after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-yellow-400
+                  after:left-0 after:bottom-[-4px] hover:after:w-full after:transition-all after:duration-300">
+            About Me
+          </a></li>
+
+          <li><a href="data-projects-eng.html"
+            class="relative text-gray-300 hover:text-yellow-400 transition duration-300
+                  after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-yellow-400
+                  after:left-0 after:bottom-[-4px] hover:after:w-full after:transition-all after:duration-300">
+            Data Projects
+          </a></li>
+
+          <li><a href="webdev-projects-eng.html"
+            class="relative text-gray-300 hover:text-yellow-400 transition duration-300
+                  after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-yellow-400
+                  after:left-0 after:bottom-[-4px] hover:after:w-full after:transition-all after:duration-300">
+            WebDev Projects
+          </a></li>
+
+          <li><a href="career-eng.html"
+            class="relative text-gray-300 hover:text-yellow-400 transition duration-300
+                  after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-yellow-400
+                  after:left-0 after:bottom-[-4px] hover:after:w-full after:transition-all after:duration-300">
+            Working Career
+          </a></li>
+        </ul>
+    </div>
+  </nav>
+
+  <!-- Data Projects Section - Tailwind Version -->
+<section class="text-center py-16 px-4">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-4xl font-bold text-yellow-400 mb-4">Data Projects</h1>
+    <p class="text-gray-300 text-lg">
+      Here you can find my main data-related projects. Many of them are grouped in the "Data Engineering" repository on
+      GitHub, but for didactic and better presentation purposes, I believe that the format below is a more elegant way to
+      showcase the projects. As I have availability, I will create the pages, in addition to the pages that can also be
+      checked in the respective GitHub repositories.
+    </p>
+    <div class="mt-6">
+      <a href="https://github.com/Shamslux?tab=repositories" target="_blank"
+         class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-yellow-500 hover:bg-yellow-600 rounded transition">
+        <i data-lucide="github" class="w-5 h-5 text-yellow-400"></i> To GitHub Repositories
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="bg-gray-900 py-12">
+  <div class="max-w-7xl mx-auto px-4 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+
+    <!-- Card Component -->
+    <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col">
+    <img src="assets/anac.png" alt="anac-project"
+        class="w-full h-32 object-contain bg-gray-900 p-4 rounded-t-lg">
+    <div class="p-6 flex flex-col flex-grow justify-between">
+        <div>
+        <h2 class="text-xl font-semibold text-yellow-400 mb-2">ANAC Data Project</h2>
+        <p class="text-gray-300 text-sm">
+            My most recent project involved working with public data from ANAC (Brazil’s National Civil Aviation Agency). The
+            project documentation is currently available only in Portuguese, including a video explanation. I used technologies such
+            as Airflow and Spark running in Docker, along with Jupyter Notebooks. I also created dashboards using Power BI.
+            Moreover, I leveraged GPT-4o to accelerate the entire process, showcasing how AI tools can enhance our workflows, assist
+            with challenges, and lead to faster deliveries.
+        </p>
+        </div>
+        <div class="mt-4 flex gap-2">
+        <a href="https://github.com/Shamslux/DataEngineering/blob/main/ANAC-data-engineering-project/ANAC-data-engineering-project.md" 
+            target="_blank"
+            class="inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200">
+            <i data-lucide="folder-open" class="w-5 h-5"></i> Check the Project
+        </a>
+        </div>
+    </div>
+    </div>
+
+    <!-- Card Component -->
+    <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col">
+      <img src="assets/dbt-icon-filled-256.png" alt="dbt-project" class="w-full h-32 object-contain bg-gray-900 p-4">
+      <div class="p-6 flex flex-col flex-grow justify-between">
+        <div>
+          <h2 class="text-xl font-semibold text-yellow-400 mb-2">dbt Project</h2>
+          <p class="text-gray-300 text-sm">I created this personal project to practice basic dbt fundamentals since we started using it at our company.</p>
+        </div>
+        <div class="mt-4 flex gap-2">
+        <a href="https://github.com/Shamslux/DataEngineering/blob/main/dbt-pokemon-project/pokemon-dbt-testing-project.md" 
+        target="_blank"
+        class="inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200">
+        <i data-lucide="book-open" class="w-5 h-5"></i> Check the Doc
+        </a>
+        <a href="https://github.com/Shamslux/DataEngineering/tree/main/dbt-pokemon-project" 
+        target="_blank"
+        class="inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200">
+        <i data-lucide="folder-open" class="w-5 h-5"></i> Check the Project
+        </a>
+        </div>
+      </div>
+    </div>
+
+        <!-- Card Component -->
+    <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col">
+    <img src="assets/hadoop-original.svg" alt="hive-impala-course"
+        class="w-full h-32 object-contain bg-gray-900 p-4 rounded-t-lg">
+    <div class="p-6 flex flex-col flex-grow justify-between">
+        <div>
+        <h2 class="text-xl font-semibold text-yellow-400 mb-2">Hive/Impala Course and Project</h2>
+        <p class="text-gray-300 text-sm">
+            This was a course with instructor Fernando Amaral, an expert in the field of Data. The focus was on studying Hive and
+            Impala, with the creation of a Data Warehouse in Hive and using HDFS on a Cloudera Red Hat virtual machine.
+        </p>
+        </div>
+        <div class="mt-4 flex gap-2">
+        <a href="https://github.com/Shamslux/DataEngineering/blob/main/Hive_Impala/Hive%20and%20Impala.md" 
+            target="_blank"
+            class="inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200">
+            <i data-lucide="book-open" class="w-5 h-5"></i> Check the Doc
+        </a>
+        <a href="https://github.com/Shamslux/DataEngineering/tree/main/Hive_Impala/Scripts" 
+            target="_blank"
+            class="inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200">
+            <i data-lucide="code-2" class="w-5 h-5"></i> Check Scripts
+        </a>
+        </div>
+    </div>
+    </div>
+
+        <!-- Card Component -->
+    <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col">
+    <img src="assets/microsoftsqlserver-original.svg" alt="advanced-sql-server-course"
+        class="w-full h-32 object-contain bg-gray-900 p-4 rounded-t-lg">
+    <div class="p-6 flex flex-col flex-grow justify-between">
+        <div>
+        <h2 class="text-xl font-semibold text-yellow-400 mb-2">SQL Server Master Class – Advanced SQL</h2>
+        <p class="text-gray-300 text-sm">
+            This was a course with the brilliant instructor Travis Cuzick, who brought excellent exercises and theoretical content
+            on intermediate and advanced SQL using Microsoft's SQL Server. The course covered everything from Windows Functions like
+            OVER, PARTITION BY, RANK, DENSE RANK, to CTEs, PIVOT, TEMP TABLES, STORED PROCEDURES, and DYNAMIC SQL.
+        </p>
+        </div>
+        <div class="mt-4 flex gap-2">
+        <a href="https://github.com/Shamslux/SQL_Server_Masterclass_for_Data_Analysis/blob/main/README.md" 
+            target="_blank"
+            class="inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200">
+            <i data-lucide="book-open" class="w-5 h-5"></i> Check the Doc
+        </a>
+        <a href="https://github.com/Shamslux/SQL_Server_Masterclass_for_Data_Analysis/tree/main/Codes" 
+            target="_blank"
+            class="inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200">
+            <i data-lucide="code-2" class="w-5 h-5"></i> Check Scripts
+        </a>
+        </div>
+    </div>
+    </div>
+
+        <!-- Card Component -->
+    <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col">
+    <img src="https://img.icons8.com/dotty/80/FFFFFF/project.png" alt="palmeira-vale"
+        class="w-full h-32 object-contain bg-gray-900 p-4 rounded-t-lg">
+    <div class="p-6 flex flex-col flex-grow justify-between">
+        <div>
+        <h2 class="text-xl font-semibold text-yellow-400 mb-2">Palmeira do Vale – My First Project!</h2>
+        <p class="text-gray-300 text-sm">
+            Is it fantastic? Is it amazing? Is it perfect? No, I highly doubt it. But this was the first project that marked the
+            beginning of my journey in the data world back in 2020. It's a very short and straightforward project about a sports
+            club that decided to have a system for member registration and an analytical system to later understand its data.
+        </p>
+        </div>
+        <div class="mt-4 flex gap-2">
+        <a href="https://github.com/Shamslux/Palmeira-do-Vale-s-Project/blob/main/README.md" 
+            target="_blank"
+            class="inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200">
+            <i data-lucide="book-open" class="w-5 h-5"></i> Check the Doc
+        </a>
+        <a href="https://github.com/Shamslux/Palmeira-do-Vale-s-Project/tree/main" 
+            target="_blank"
+            class="inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200">
+            <i data-lucide="folder-open" class="w-5 h-5"></i> Check Main Folder
+        </a>
+        </div>
+    </div>
+    </div>
+
+        <!-- Card Component -->
+    <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col">
+    <img src="https://img.icons8.com/dotty/80/FFFFFF/project.png" alt="ellas-eshop"
+        class="w-full h-32 object-contain bg-gray-900 p-4 rounded-t-lg">
+    <div class="p-6 flex flex-col flex-grow justify-between">
+        <div>
+        <h2 class="text-xl font-semibold text-yellow-400 mb-2">Ellas E-Shop – The Second Project!</h2>
+        <p class="text-gray-300 text-sm">
+            My second project was bolder, and although it was simple, it was a significant challenge at the time. In late 2020 and
+            early 2021, this project was inspired by a real need: my sister's dream of setting up an e-shop for women's ballet
+            flats. Leveraging her business rules and daring to create something closer to real life, I invested months in this more
+            robust project. All the data was created by me, and everything was done manually, without fake Python or random Excel.
+            <span class="text-yellow-300">😉</span>
+        </p>
+        </div>
+        <div class="mt-4 flex gap-2">
+        <a href="https://github.com/Shamslux/Ellas_Shoe_EShop/blob/main/README.md" 
+            target="_blank"
+            class="inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200">
+            <i data-lucide="book-open" class="w-5 h-5"></i> Check the Doc
+        </a>
+        <a href="https://github.com/Shamslux/SQL_Server_Masterclass_for_Data_Analysis/tree/main/Codes" 
+            target="_blank"
+            class="inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200">
+            <i data-lucide="folder-open" class="w-5 h-5"></i> Check Main Folder
+        </a>
+        </div>
+    </div>
+    </div>
+
+        <!-- Card Component -->
+    <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col">
+    <img src="https://img.icons8.com/quill/100/FFFFFF/combo-chart.png" alt="budget-thumbail"
+        class="w-full h-32 object-contain bg-gray-900 p-4 rounded-t-lg">
+    <div class="p-6 flex flex-col flex-grow justify-between">
+        <div>
+        <h2 class="text-xl font-semibold text-yellow-400 mb-2">Budget Management – A Power BI Professional Course</h2>
+        <p class="text-gray-300 text-sm">
+            Course taught by instructor André Rosa with a focus on learning to master the main DAX formulas to solve challenges in
+            creating a dashboard in Power BI. The project was to create a budget management dashboard.
+        </p>
+        </div>
+        <div class="mt-4 flex gap-2">
+        <a href="https://github.com/Shamslux/Budget-Management" 
+            target="_blank"
+            class="inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200">
+            <i data-lucide="folder-open" class="w-5 h-5"></i> Check Main Folder
+        </a>
+        </div>
+    </div>
+    </div>
+
+    <!-- Card Component -->
+    <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col">
+    <img src="assets/python-original.svg" alt="python-ibge-thumbail"
+        class="w-full h-32 object-contain bg-gray-900 p-4 rounded-t-lg">
+    <div class="p-6 flex flex-col flex-grow justify-between">
+        <div>
+        <h2 class="text-xl font-semibold text-yellow-400 mb-2">Automation in Python</h2>
+        <p class="text-gray-300 text-sm">
+            This was an automation I created while working for a logistics and maritime transportation client. One of their analysts
+            used to manually retrieve a PDF file every month, read it, and finally enter the data into the dashboard. This
+            automation uses Python and Pandas to transform unstructured data into semi-structured data, which is then further
+            processed in the ETL pipeline (in the real project, it was done using Apache Hop and Python, but what I replicated here
+            for educational purposes was in pure Python).
+        </p>
+        </div>
+        <div class="mt-4 flex gap-2">
+        <a href="https://github.com/Shamslux/python_projects/blob/main/scripts/script_1_extracting_data_from_ibge.py"
+            target="_blank"
+            class="inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200">
+            <i data-lucide="file-code-2" class="w-5 h-5"></i> Check Script
+        </a>
+        </div>
+    </div>
+    </div>
+
+    <!-- Card Component -->
+    <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col">
+    <img src="assets/dio-github-thumbail.webp" alt="dio-github-thumbail"
+        class="w-full h-32 object-contain bg-gray-900 p-4 rounded-t-lg">
+    <div class="p-6 flex flex-col flex-grow justify-between">
+        <div>
+        <h2 class="text-xl font-semibold text-yellow-400 mb-2">DIO's GitHub Certification Formation</h2>
+        <p class="text-gray-300 text-sm">
+            This was a course I took to review my knowledge in Git and GitHub. It was a very well-planned course, although basic,
+            that covered everything from Git language, common uses of GitHub, to less explored parts in other basic courses, such as
+            GitHub administration, plans, Codespaces, etc. The training also included 3 project challenges and one code challenge.
+        </p>
+        </div>
+        <div class="mt-4 flex gap-2">
+        <a href="https://github.com/Shamslux/DataEngineering/blob/main/DIO-GitHub-Certification-Formation/DIO-GitHub-Certification-Formation.md"
+            target="_blank"
+            class="inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200">
+            <i data-lucide="book-open" class="w-5 h-5"></i> Check the Doc
+        </a>
+        </div>
+    </div>
+    </div>
+
+
+  </div>
+</section>
+
+
+  <!-- Footer Section -->
+  <footer id="career" class="border-t border-yellow-800 pt-6 pb-12 text-center text-sm text-gray-500 px-4">
+    <p>
+      <a href="data-projects-eng.html" class="hover:underline text-yellow-300">Back to top</a>
+    </p>
+
+    <p class="mt-2">Shamslux's TechVault &copy; Shamslux 2025.</p>
+
+    <p class="mt-2">
+      Developed by
+      <a href="https://github.com/Shamslux" target="_blank"
+        class="dev-badge">
+        Shamslux
+      </a>
+    </p>
+      <div class="flex justify-center gap-4 mt-4">
+    <a href="#">
+      <img src="https://flagcdn.com/w40/br.png" alt="Português" class="flag-icon" data-label="Disponível em breve!">
+    </a>
+    <a href="index-eng.html">
+      <img src="https://flagcdn.com/w40/us.png" alt="English" class="flag-icon">
+    </a>
+    <a href="#">
+      <img src="https://flagcdn.com/w40/nl.png" alt="Nerderlands" class="flag-icon" data-label="Binnenkort beschikbaar!">
+    </a>
+  </div>
+  </footer>
+
+<!-- Footer Section Ends Here -->
+
+<!-- Lucide Scripts Section -->
+<script>
+  lucide.createIcons();
+</script>
+<!-- Lucide Scripts Section Ends Here -->
+
+<!-- JS Scripts Section -->
+<script>
+  // Tooltips para os ícones de tecnologia
+  document.querySelectorAll('.tool-icon').forEach(icon => {
+    const tooltip = document.createElement('div');
+    tooltip.innerText = icon.dataset.label;
+    tooltip.className = 'absolute bg-yellow-600 bg-opacity-30 backdrop-blur-sm text-yellow-300 text-xs px-2 py-1 rounded-lg shadow-lg transition-opacity duration-300 opacity-0 pointer-events-none';
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'relative group inline-block';
+    icon.parentNode.insertBefore(wrapper, icon);
+    wrapper.appendChild(icon);
+    wrapper.appendChild(tooltip);
+
+    wrapper.addEventListener('mouseenter', () => {
+      tooltip.classList.add('opacity-100');
+      tooltip.style.bottom = icon.offsetHeight + 8 + 'px';
+      tooltip.style.left = '50%';
+      tooltip.style.transform = 'translateX(-50%)';
+    });
+    wrapper.addEventListener('mouseleave', () => {
+      tooltip.classList.remove('opacity-100');
+    });
+  });
+
+  // Tooltips para as bandeirinhas
+  document.querySelectorAll('.flag-icon').forEach(icon => {
+    if (!icon.dataset.label) return;
+
+    const tooltip = document.createElement('div');
+    tooltip.innerText = icon.dataset.label;
+    tooltip.className = 'absolute bg-yellow-600 bg-opacity-30 backdrop-blur-sm text-yellow-300 text-xs px-2 py-1 rounded-lg shadow-lg transition-opacity duration-300 opacity-0 pointer-events-none';
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'relative group inline-block';
+    icon.parentNode.insertBefore(wrapper, icon);
+    wrapper.appendChild(icon);
+    wrapper.appendChild(tooltip);
+
+    wrapper.addEventListener('mouseenter', () => {
+      tooltip.classList.add('opacity-100');
+      tooltip.style.bottom = icon.offsetHeight + 8 + 'px';
+      tooltip.style.left = '50%';
+      tooltip.style.transform = 'translateX(-50%)';
+    });
+    wrapper.addEventListener('mouseleave', () => {
+      tooltip.classList.remove('opacity-100');
+    });
+  });
+</script>
+
+</body>
+</html>
