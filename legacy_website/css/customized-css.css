@@ -1,0 +1,136 @@
+/* Colors */
+:root {
+  --primary-bg-color: #5271FF;
+  --secondary-bg-color: #FFDE59;
+  --text-color-dark: #5271FF;
+  --text-color-light: #000000;
+  --border-color: #e5e5e5;
+}
+
+/* Navbar */
+.bg-navbar-custom {
+  background-color: var(--primary-bg-color);
+}
+
+/* Sections */
+#home {
+  background-color: var(--secondary-bg-color);
+  color: var(--primary-bg-color);
+  font-weight: bold;
+}
+
+.about-me-before,
+.about-me-now,
+.warning,
+.box {
+  padding: 60px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.about-me-before {
+  background-color: var(--secondary-bg-color);
+  color: var(--primary-bg-color);
+}
+
+.about-me-now {
+  background-color: white;
+  color: var(--text-color-light);
+}
+
+.job-showcase {
+  background-color: white;
+  color: var(--text-color-light);
+  padding: 25px;
+}
+
+.profile-links {
+  margin-top: 30px;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+}
+.profile-links .icon {
+  margin-top: 20px;
+}
+.profile-links h4 {
+  font-weight: bold;
+}
+.profile-links .row {
+  align-items: center;
+}
+
+.warning {
+  background-color: white;
+  color: var(--text-color-light);
+}
+
+/* Blockquote */
+.blockquote {
+  margin-bottom: 1px;
+}
+
+.blockquote:first-child {
+  margin-top: 20px;
+}
+
+/* Images */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Progress Bar */
+.progress-container {
+  position: fixed;
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+  top: 0;
+  z-index: 9999;
+}
+
+.progress-bar {
+  height: 8px;
+  background: linear-gradient(45deg, #007bff, #66ccff);
+  width: 0%;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  border-radius: 4px;
+}
+
+/* Jumbotron */
+.jumbotron {
+  padding-top: var(--jumbotron-padding-y);
+  padding-bottom: var(--jumbotron-padding-y);
+  margin-bottom: 0;
+  background-color: var(--secondary-bg-color);
+  color: var(--primary-bg-color);
+}
+
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: calc(var(--jumbotron-padding-y) * 2);
+    padding-bottom: calc(var(--jumbotron-padding-y) * 2);
+  }
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron-heading {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+}
+
+/* Footer */
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: 0.25rem;
+}

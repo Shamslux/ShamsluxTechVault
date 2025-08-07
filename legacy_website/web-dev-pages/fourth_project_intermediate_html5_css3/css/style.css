@@ -1,0 +1,237 @@
+/* Website structure */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    background: white url(../imgs/background.png) repeat-x;
+}
+
+#main {
+    width: 750px;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+
+}
+
+
+.logo {
+    width: 140px;
+    height: 140px;
+    /* border: 1px solid red; */
+    background: url(../imgs/news-logo.png) no-repeat center;
+    background-size: contain;
+    text-indent: -3000px;
+}
+
+/* Navigation menu */
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#main ul {
+    margin-top: 3px;
+    background: #b10333;
+    float: left;
+}
+
+#main ul li {
+    float: left;
+}
+
+#main ul a {
+    font-size: 0.9em;
+    display: block;
+    padding: 0.5em 1.5em;
+    line-height: 1.5em;
+    text-decoration: none;
+    color: white;
+    background: url(../imgs/divisor.png) no-repeat left center;
+}
+
+#main ul .first a {
+    background: none;
+}
+
+#main ul a:hover {
+    color: #69001d;
+}
+
+body.home #navigation a#home {
+    color: white;
+    background: #de003e;
+    cursor: text;
+}
+
+/* It formats the 3 columns! */
+
+#content {
+    margin-top: 100px;
+    background: white;
+    float: left;
+}
+
+#three-columns #primary-content {
+    width: 270px;
+    float: left;
+    margin: 0 0 20px 195px;
+
+}
+
+#two-columns #primary-content {
+    width: 555px;
+    float: left;
+    margin: 0 0 20px 195px;
+
+}
+
+#one-column #primary-content {
+    width: 750px;
+    float: left;
+    margin: 0 0 20px 0;
+}
+
+#secondary-content {
+    width: 270px;
+    float: left;
+    margin: 0 0 20px 15px;
+}
+
+#secondary-content h3 {
+    text-transform: uppercase;
+    display: inline;
+    font-size: 0.8em;
+    margin-bottom: 5px;
+    padding: 3px;
+    background-color: #b10333;
+    color: white;
+}
+
+#secondary-content p {
+    padding: 5px;
+    font-size: smaller;
+}
+
+#secondary-content a {
+    text-decoration: none;
+    color: #69001d;
+}
+
+#secondary-content a:hover {
+    text-decoration: underline;
+
+}
+
+#side-content {
+    width: 180px;
+    float: left;
+    margin: 0 0 20px -750px;
+}
+
+#side-content a {
+    text-decoration: none;
+    color: black;
+}
+
+#side-content a:hover {
+    text-decoration: underline;
+}
+
+#primary-content p {
+    padding: 5px;
+    font-size: smaller;
+}
+
+#primary-content a {
+    text-decoration: none;
+    color: #69001d;
+}
+
+#primary-content a:hover {
+    text-decoration: underline;
+
+}
+
+#primary-content h3 {
+    text-transform: uppercase;
+    display: inline;
+    font-size: 0.8em;
+    margin-bottom: 5px;
+    padding: 3px;
+    background-color: #b10333;
+    color: white;
+}
+
+/* Box formats */
+
+.box {
+    margin: 10px 0;
+    padding: 5px;
+    background: #f3f3f3 url(../imgs/background-box.png);
+}
+
+.box-content {
+    background: white;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.box-img {
+    border: 1px rgba(206, 202, 202, 0.712);
+}
+
+h2 {
+    font-size: 1em;
+    background: #294c71;
+    color: white;
+    padding: 5px;
+}
+
+h4 {
+    color: black;
+    padding: 5px;
+}
+
+/* Form formats */
+
+label {
+    display: block;
+    cursor: pointer;
+}
+
+input {
+    padding: 5px;
+    margin-top: 5px;
+    width: 125px;
+    font-size: 0.9em;
+    background-color: white;
+    border: 1px solid rgba(192, 188, 188, 0.623);
+}
+
+input.submit {
+    width: 80px;
+    color: white;
+    background-color: #b10333;
+    border: 2px solid #870529;
+    margin-top: 5px;
+}
+
+/* Footer */
+
+#footer {
+    background: #294c71;
+    padding: 20px;
+}
+
+#footer-final {
+    width: 750px;
+    margin: auto;
+    color: white;
+    text-align: center;
+}

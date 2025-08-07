@@ -1,0 +1,47 @@
+body{
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px;
+}
+
+h1{
+    color: rgb(20, 116, 172);
+    font-size: 1.2em;
+}
+
+#main_image  img{
+    width: 900px;
+    height: 500px;
+}
+
+#menu{
+    background-color: rgb(20, 116, 172);
+    padding: 18px;
+    width: 865px;
+    color: white;
+}
+
+#content{
+    width: 880px;
+    padding: 10px;
+    background-color: beige;
+}
+
+.center{
+    text-align: center;
+}
+
+.img_border{
+    border: 10px;
+    border-style: solid;
+    border-color: rgb(20, 116, 172);
+}
+
+
+
