@@ -12,47 +12,60 @@
 <body class="bg-gray-900 text-gray-100 font-sans">
 
   <!-- Navbar -->
-  <nav class="bg-gray-950 shadow-md sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="index-eng.html" class="text-2xl font-bold text-yellow-400 hover:opacity-80 transition">Shamslux's <span class="text-white">Tech</span><span class="text-yellow-400">Vault</span></a>
-        <ul class="flex gap-6 text-sm font-medium">
-          <li><a href="index-eng.html"
-            class="relative text-gray-300 hover:text-yellow-400 transition duration-300
-                  after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-yellow-400
-                  after:left-0 after:bottom-[-4px] hover:after:w-full after:transition-all after:duration-300">
-            Home
-          </a></li>
+<nav class="bg-gray-950 shadow-md sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-6 py-4">
+    <div class="flex items-center justify-between">
+      <!-- Brand -->
+      <a href="index-eng.html" class="text-2xl font-bold text-yellow-400 hover:opacity-80 transition">
+        Shamslux's <span class="text-white">Tech</span><span class="text-yellow-400">Vault</span>
+      </a>
 
-          <li><a href="about-me-eng.html"
-            class="relative text-gray-300 hover:text-yellow-400 transition duration-300
-                  after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-yellow-400
-                  after:left-0 after:bottom-[-4px] hover:after:w-full after:transition-all after:duration-300">
-            About Me
-          </a></li>
+      <!-- Botão hamburger (mobile) -->
+      <button
+        id="navToggle"
+        class="md:hidden inline-flex items-center justify-center p-2 rounded-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+        aria-controls="navMenu"
+        aria-expanded="false"
+        aria-label="Abrir menu"
+      >
+        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
 
-          <li><a href="data-projects-eng.html"
-            class="relative text-gray-300 hover:text-yellow-400 transition duration-300
-                  after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-yellow-400
-                  after:left-0 after:bottom-[-4px] hover:after:w-full after:transition-all after:duration-300">
-            Data Projects
-          </a></li>
-
-          <li><a href="webdev-projects-eng.html"
-            class="relative text-gray-300 hover:text-yellow-400 transition duration-300
-                  after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-yellow-400
-                  after:left-0 after:bottom-[-4px] hover:after:w-full after:transition-all after:duration-300">
-            WebDev Projects
-          </a></li>
-
-          <li><a href="career-eng.html"
-            class="relative text-gray-300 hover:text-yellow-400 transition duration-300
-                  after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-yellow-400
-                  after:left-0 after:bottom-[-4px] hover:after:w-full after:transition-all after:duration-300">
-            Working Career
-          </a></li>
-        </ul>
+      <!-- Menu (desktop) -->
+      <ul class="hidden md:flex gap-6 text-sm font-medium" id="navMenu">
+        <li><a href="index-eng.html" class="relative text-gray-300 hover:text-yellow-400 transition duration-300
+                 after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-yellow-400
+                 after:left-0 after:bottom-[-4px] hover:after:w-full after:transition-all after:duration-300">Home</a></li>
+        <li><a href="about-me-eng.html" class="relative text-gray-300 hover:text-yellow-400 transition duration-300
+                 after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-yellow-400
+                 after:left-0 after:bottom-[-4px] hover:after:w-full after:transition-all after:duration-300">About Me</a></li>
+        <li><a href="data-projects-eng.html" class="relative text-gray-300 hover:text-yellow-400 transition duration-300
+                 after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-yellow-400
+                 after:left-0 after:bottom-[-4px] hover:after:w-full after:transition-all after:duration-300">Data Projects</a></li>
+        <li><a href="webdev-projects-eng.html" class="relative text-gray-300 hover:text-yellow-400 transition duration-300
+                 after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-yellow-400
+                 after:left-0 after:bottom-[-4px] hover:after:w-full after:transition-all after:duration-300">WebDev Projects</a></li>
+        <li><a href="career-eng.html" class="relative text-gray-300 hover:text-yellow-400 transition duration-300
+                 after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-yellow-400
+                 after:left-0 after:bottom-[-4px] hover:after:w-full after:transition-all after:duration-300">Working Career</a></li>
+      </ul>
     </div>
-  </nav>
+
+    <!-- Menu (mobile) -->
+    <ul id="navMenuMobile"
+        class="hidden md:hidden flex-col gap-3 pt-3 text-sm font-medium"
+        aria-label="Menu mobile">
+      <li><a href="index-eng.html" class="block py-2 text-gray-300 hover:text-yellow-400">Home</a></li>
+      <li><a href="about-me-eng.html" class="block py-2 text-gray-300 hover:text-yellow-400">About Me</a></li>
+      <li><a href="data-projects-eng.html" class="block py-2 text-gray-300 hover:text-yellow-400">Data Projects</a></li>
+      <li><a href="webdev-projects-eng.html" class="block py-2 text-gray-300 hover:text-yellow-400">WebDev Projects</a></li>
+      <li><a href="career-eng.html" class="block py-2 text-gray-300 hover:text-yellow-400">Working Career</a></li>
+    </ul>
+  </div>
+</nav>
 
   <!-- Data Projects Section - Tailwind Version -->
 <section class="text-center py-16 px-4">
@@ -450,6 +463,45 @@
       tooltip.classList.remove('opacity-100');
     });
   });
+</script>
+<script>
+  (function () {
+    const btn = document.getElementById('navToggle');
+    const desktopMenu = document.getElementById('navMenu');
+    const mobileMenu = document.getElementById('navMenuMobile');
+
+    // Garante estado inicial correto
+    desktopMenu.classList.add('hidden'); // escondido em < md
+    if (window.matchMedia('(min-width: 768px)').matches) {
+      desktopMenu.classList.remove('hidden'); // visível em md+
+      mobileMenu.classList.add('hidden');
+    }
+
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Fecha o menu ao clicar em um link no mobile
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Sincroniza ao redimensionar (ex.: girar o celular)
+    window.addEventListener('resize', () => {
+      if (window.matchMedia('(min-width: 768px)').matches) {
+        desktopMenu.classList.remove('hidden');
+        mobileMenu.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        desktopMenu.classList.add('hidden');
+      }
+    });
+  })();
 </script>
 
 </body>
