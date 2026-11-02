@@ -1,0 +1,95 @@
+---
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { languages, pages, localizedPath, type Lang, type Page } from '../../i18n/config';
+import TechVaultNav from '../../components/TechVaultNav.astro';
+import TechVaultFooter from '../../components/TechVaultFooter.astro';
+import TechVaultProjectCard from '../../components/TechVaultProjectCard.astro';
+import dataProjects from '../../content/projects/data-projects.json';
+import webProjects from '../../content/projects/web-projects.json';
+
+export function getStaticPaths() {
+  return Object.keys(languages).flatMap(lang => pages.map(page => ({
+    params: { lang, page: page === 'home' ? undefined : page },
+    props: { lang: lang as Lang, page }
+  })));
+}
+
+const { lang, page } = Astro.props as { lang: Lang; page: Page };
+const translatedLanguages = new Set<Lang>(['en', 'pt-br', 'fr']);
+const hasTranslation = translatedLanguages.has(lang) || lang === 'es' || (lang === 'nb' && (page === 'home' || page === 'about' || page === 'career' || page === 'data-projects' || page === 'web-projects')) || (lang === 'zh-cn' && (page === 'home' || page === 'about' || page === 'career' || page === 'data-projects' || page === 'web-projects'));
+const contentLang: Lang = hasTranslation ? lang : 'en';
+const base = join(process.cwd(), 'src', 'content');
+const template = readFileSync(join(base, 'templates', `${page}.html`), 'utf8');
+type PageText = { text: string[]; attrs: Record<string,string> };
+const translations = JSON.parse(readFileSync(join(base, 'translations', contentLang, `${page}.json`), 'utf8')) as PageText;
+
+function escapeText(value: string) {
+  return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+function escapeAttribute(value: string) {
+  return escapeText(value).replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+// One shared HTML structure per page; only the text and translated attributes vary.
+const localized = template
+  .replace(/@@TV_TEXT_(\d+)@@/g, (_, n: string) => escapeText(translations.text[Number(n)] ?? ''))
+  .replace(/@@TV_ATTR_([a-zA-Z0-9_]+)@@/g, (_, key: string) => escapeAttribute(translations.attrs[key] ?? ''));
+const headMatch = localized.match(/<head[^>]*>([\s\S]*?)<\/head>/i);
+const bodyMatch = localized.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
+if (!headMatch || !bodyMatch) throw new Error(`Invalid page template: ${page}`);
+const routeMap: Record<string,Page> = {
+  'index.html':'home', 'index-eng.html':'home', 'index-pt.html':'home', 'index-nl.html':'home',
+  'about-me-eng.html':'about', 'career-eng.html':'career',
+  'data-projects-eng.html':'data-projects', 'webdev-projects-eng.html':'web-projects'
+};
+function rewrite(source: string) {
+  return source.replace(/(href|src)=(['"])([^'"]+)\2/gi, (full, attr: string, quote: string, url: string) => {
+    if (url.startsWith('/original/')) {
+      const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+      return `${attr}=${quote}${base}${url}${quote}`;
+    }
+    if (routeMap[url]) return `${attr}=${quote}${localizedPath(lang,routeMap[url])}${quote}`;
+    if (url.startsWith('assets/')) return `${attr}=${quote}${import.meta.env.BASE_URL.replace(/\/$/, '')}/original/${url}${quote}`;
+    return full;
+  });
+}
+let head = rewrite(headMatch[1]).replace(/<title[^>]*>[\s\S]*?<\/title>/i, `<title>Shamslux's TechVault</title>`);
+const canonical = new URL(localizedPath(contentLang,page), Astro.site).toString();
+head += `<link rel="canonical" href="${canonical}">`;
+if (hasTranslation) head += `<link rel="alternate" hreflang="${lang}" href="${canonical}">`;
+else head += '<meta name="robots" content="noindex,follow">';
+let body = rewrite(bodyMatch[1]);
+if (!hasTranslation) body = `<div lang="en" style="background:#292524;color:#fde68a;padding:.65rem 1rem;text-align:center;font-size:.9rem" role="status">English content — ${languages[lang]} translation is being prepared.</div>` + body;
+// Render each original HTML fragment through its own Astro component.
+// Translation substitution happens before rendering, so the layout and text remain unchanged.
+function localizeFragment(fragment: string) {
+  return rewrite(fragment
+    .replace(/@@TV_TEXT_(\d+)@@/g, (_, n: string) => escapeText(translations.text[Number(n)] ?? ''))
+    .replace(/@@TV_ATTR_([a-zA-Z0-9_]+)@@/g, (_, key: string) => escapeAttribute(translations.attrs[key] ?? '')));
+}
+const footer = localizeFragment(readFileSync(join(base, 'partials', 'footers', `${page}.html`), 'utf8'));
+const projectCards = page === 'data-projects' ? dataProjects : page === 'web-projects' ? webProjects : [];
+const cardMarkers = [...body.matchAll(/@@TV_CARD_(\d+)@@/g)];
+for (const marker of cardMarkers) {
+  if (!projectCards[Number(marker[1])]) throw new Error(`Missing project card: ${page}/${marker[1]}`);
+}
+const chunks = body.split(/(@@TV_NAV@@|@@TV_FOOTER@@|@@TV_CARD_\d+@@)/g);
+if (!chunks.includes('@@TV_NAV@@') || !chunks.includes('@@TV_FOOTER@@'))
+  throw new Error(`Missing shared component marker: ${page}`);
+const navLabels = translations.text.slice(2, 15);
+const navigationScript = `document.getElementById('techvault-language')?.addEventListener('change',function(){window.location.assign(this.value)});`;
+---
+<!doctype html>
+<html lang={contentLang} class="dark">
+  <head><Fragment set:html={head} /></head>
+  <body class="bg-gray-900 text-gray-100 font-sans">
+    {chunks.map(chunk => chunk === '@@TV_NAV@@'
+      ? <TechVaultNav lang={lang} page={page} labels={navLabels} />
+      : chunk === '@@TV_FOOTER@@'
+        ? <TechVaultFooter html={footer} />
+        : /^@@TV_CARD_\d+@@$/.test(chunk)
+          ? <TechVaultProjectCard project={projectCards[Number(chunk.match(/\d+/)?.[0])]} texts={translations.text} />
+          : <Fragment set:html={chunk} />)}
+    <script is:inline set:html={navigationScript}></script>
+  </body>
+</html>

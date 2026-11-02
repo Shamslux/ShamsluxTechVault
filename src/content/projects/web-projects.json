@@ -1,0 +1,158 @@
+[
+  {
+    "id": 0,
+    "outerClasses": "bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col",
+    "image": {
+      "src": "assets/lentlog-thumb.png",
+      "alt": "lentlog-project",
+      "classes": "w-full h-32 object-contain bg-gray-900 p-4 rounded-t-lg"
+    },
+    "bodyClasses": "p-6 flex flex-col flex-grow justify-between",
+    "contentClasses": "",
+    "titleClasses": "text-xl font-semibold text-yellow-400 mb-2",
+    "descriptionClasses": "text-gray-300 text-sm",
+    "titleKey": 18,
+    "descriptionKey": 19,
+    "actionsClasses": "mt-4 flex gap-2",
+    "links": [
+      {
+        "href": "web-dev-pages/first_project_html5/index.html",
+        "target": "_blank",
+        "classes": "inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200",
+        "icon": "globe",
+        "iconClasses": "w-5 h-5",
+        "labelKey": 20
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "outerClasses": "bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col",
+    "image": {
+      "src": "assets/khaire-thumb.png",
+      "alt": "khaire-project",
+      "classes": "w-full h-32 object-contain bg-gray-900 p-4 rounded-t-lg"
+    },
+    "bodyClasses": "p-6 flex flex-col flex-grow justify-between",
+    "contentClasses": "",
+    "titleClasses": "text-xl font-semibold text-yellow-400 mb-2",
+    "descriptionClasses": "text-gray-300 text-sm",
+    "titleKey": 21,
+    "descriptionKey": 22,
+    "actionsClasses": "mt-4 flex gap-2",
+    "links": [
+      {
+        "href": "web-dev-pages/second_project_html5_css/index.html",
+        "target": "_blank",
+        "classes": "inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200",
+        "icon": "globe",
+        "iconClasses": "w-5 h-5",
+        "labelKey": 23
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "outerClasses": "bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col",
+    "image": {
+      "src": "assets/garden-thumb.png",
+      "alt": "garden-project",
+      "classes": "w-full h-32 object-contain bg-gray-900 p-4 rounded-t-lg"
+    },
+    "bodyClasses": "p-6 flex flex-col flex-grow justify-between",
+    "contentClasses": "",
+    "titleClasses": "text-xl font-semibold text-yellow-400 mb-2",
+    "descriptionClasses": "text-gray-300 text-sm",
+    "titleKey": 24,
+    "descriptionKey": 25,
+    "actionsClasses": "mt-4 flex gap-2",
+    "links": [
+      {
+        "href": "web-dev-pages/third_project_html5_css/index.html",
+        "target": "_blank",
+        "classes": "inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200",
+        "icon": "globe",
+        "iconClasses": "w-5 h-5",
+        "labelKey": 26
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "outerClasses": "bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col",
+    "image": {
+      "src": "assets/newspaper-thumb.png",
+      "alt": "newspaper-project",
+      "classes": "w-full h-32 object-contain bg-gray-900 p-4 rounded-t-lg"
+    },
+    "bodyClasses": "p-6 flex flex-col flex-grow justify-between",
+    "contentClasses": "",
+    "titleClasses": "text-xl font-semibold text-yellow-400 mb-2",
+    "descriptionClasses": "text-gray-300 text-sm",
+    "titleKey": 27,
+    "descriptionKey": 28,
+    "actionsClasses": "mt-4 flex gap-2",
+    "links": [
+      {
+        "href": "web-dev-pages/fourth_project_intermediate_html5_css3/index.html",
+        "target": "_blank",
+        "classes": "inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200",
+        "icon": "globe",
+        "iconClasses": "w-5 h-5",
+        "labelKey": 29
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "outerClasses": "bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col",
+    "image": {
+      "src": "assets/finans-thumb.png",
+      "alt": "finans-project",
+      "classes": "w-full h-32 object-contain bg-gray-900 p-4 rounded-t-lg"
+    },
+    "bodyClasses": "p-6 flex flex-col flex-grow justify-between",
+    "contentClasses": "",
+    "titleClasses": "text-xl font-semibold text-yellow-400 mb-2",
+    "descriptionClasses": "text-gray-300 text-sm",
+    "titleKey": 30,
+    "descriptionKey": 31,
+    "actionsClasses": "mt-4 flex gap-2",
+    "links": [
+      {
+        "href": "web-dev-pages/fifth_project_bootstrap4/index.html",
+        "target": "_blank",
+        "classes": "inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200",
+        "icon": "globe",
+        "iconClasses": "w-5 h-5",
+        "labelKey": 32
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "outerClasses": "bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col",
+    "image": {
+      "src": "assets/shaddai.svg",
+      "alt": "shaddai-logistica",
+      "classes": "w-full h-32 object-contain bg-gray-900 p-4 rounded-t-lg"
+    },
+    "bodyClasses": "p-6 flex flex-col flex-grow justify-between",
+    "contentClasses": "",
+    "titleClasses": "text-xl font-semibold text-yellow-400 mb-2",
+    "descriptionClasses": "text-gray-300 text-sm",
+    "titleKey": 33,
+    "descriptionKey": 34,
+    "actionsClasses": "mt-4 flex gap-2",
+    "links": [
+      {
+        "href": "https://shaddailogistica.com.br/",
+        "target": "_blank",
+        "classes": "inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200",
+        "icon": "globe",
+        "iconClasses": "w-5 h-5",
+        "labelKey": 35
+      }
+    ]
+  }
+]

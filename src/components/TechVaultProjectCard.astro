@@ -1,0 +1,48 @@
+---
+interface ProjectLink {
+  href: string;
+  target: string;
+  classes: string;
+  icon: string;
+  iconClasses: string;
+  labelKey: number | null;
+}
+interface ProjectData {
+  id: number;
+  outerClasses: string;
+  image: { src: string; alt: string; classes: string };
+  bodyClasses: string;
+  contentClasses: string;
+  titleClasses: string;
+  descriptionClasses: string;
+  titleKey: number;
+  descriptionKey: number;
+  actionsClasses: string;
+  links: ProjectLink[];
+}
+interface Props { project: ProjectData; texts: string[] }
+const { project, texts } = Astro.props;
+const commonCardEffect = 'border border-gray-700 hover:border-yellow-500/50 transition-colors';
+const cardClasses = `${project.outerClasses} ${commonCardEffect}`;
+const siteBase = import.meta.env.BASE_URL.replace(/\/$/, '');
+const imageSrc = project.image.src.startsWith('assets/')
+  ? `${siteBase}/original/${project.image.src}`
+  : project.image.src;
+---
+<div class={cardClasses}>
+  <img alt={project.image.alt} class={project.image.classes} src={imageSrc} />
+  <div class={project.bodyClasses}>
+    <div class={project.contentClasses}>
+      <h2 class={project.titleClasses}>{texts[project.titleKey] ?? ''}</h2>
+      <p class={project.descriptionClasses}>{texts[project.descriptionKey] ?? ''}</p>
+    </div>
+    <div class={project.actionsClasses}>
+      {project.links.map(link => (
+        <a class={link.classes} href={link.href.startsWith('web-dev-pages/') ? `${siteBase}/original/${link.href}` : link.href} target={link.target || undefined}>
+          {link.icon && <i class={link.iconClasses} data-lucide={link.icon}></i>}
+          {' '}{link.labelKey === null ? '' : (texts[link.labelKey] ?? '')}
+        </a>
+      ))}
+    </div>
+  </div>
+</div>

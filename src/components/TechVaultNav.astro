@@ -1,0 +1,23 @@
+---
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { languages, localizedPath, type Lang, type Page } from '../i18n/config';
+interface Props { lang: Lang; page: Page; labels: string[] }
+const { lang, page, labels } = Astro.props;
+const template = readFileSync(join(process.cwd(), 'src', 'content', 'templates', 'navbar.html'), 'utf8');
+const escapeText = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const routeMap: Record<string,Page> = {
+  'index-eng.html':'home', 'about-me-eng.html':'about',
+  'data-projects-eng.html':'data-projects', 'webdev-projects-eng.html':'web-projects',
+  'career-eng.html':'career'
+};
+let nav = template.replace(/@@TV_TEXT_(\d+)@@/g, (_, n: string) => escapeText(labels[Number(n)-2] ?? ''));
+nav = nav.replace(/href=(['"])([^'"]+)\1/gi, (full, quote: string, url: string) =>
+  routeMap[url] ? `href=${quote}${localizedPath(lang,routeMap[url])}${quote}` : full);
+const visibleLanguages = new Set<Lang>(['en', 'pt-br', 'fr', 'es', 'nb', 'zh-cn']);
+const options = Object.entries(languages).filter(([code]) => visibleLanguages.has(code as Lang)).map(([code,label]) =>
+  `<option value="${localizedPath(code as Lang,page)}"${code===lang?' selected':''}>${escapeText(label)}</option>`).join('');
+const switcher = `<div class="techvault-locale" style="display:flex;align-items:center;gap:.5rem;padding:.5rem 1rem"><label for="techvault-language" style="font-size:.85rem">🌐 <span class="sr-only">Language</span></label><select id="techvault-language" aria-label="Language" style="background:#111827;color:#fff;border:1px solid #eab308;border-radius:.4rem;padding:.35rem;max-width:175px">${options}</select></div>`;
+nav = nav.replace(/<\/nav>/i, `${switcher}</nav>`);
+---
+<Fragment set:html={nav} />

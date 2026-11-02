@@ -1,0 +1,354 @@
+[
+  {
+    "id": 0,
+    "outerClasses": "bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col border border-gray-700 hover:border-yellow-500/50 transition-colors",
+    "image": {
+      "src": "assets/polyglot_coder.png",
+      "alt": "polyglot-coder-ai",
+      "classes": "w-full h-32 object-contain bg-gray-900 p-4 rounded-t-lg"
+    },
+    "bodyClasses": "p-6 flex flex-col flex-grow justify-between",
+    "contentClasses": "",
+    "titleClasses": "text-xl font-semibold text-yellow-400 mb-2",
+    "descriptionClasses": "text-gray-300 text-sm",
+    "titleKey": 18,
+    "descriptionKey": 19,
+    "actionsClasses": "mt-4 flex gap-2",
+    "links": [
+      {
+        "href": "https://github.com/Shamslux/Data-Engineering-AI-Solutions/blob/main/polyglot-data-ai-assistant/Polyglot%20Data%20AI%20Assistant.md",
+        "target": "_blank",
+        "classes": "inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200",
+        "icon": "cpu",
+        "iconClasses": "w-5 h-5",
+        "labelKey": 20
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "outerClasses": "bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col",
+    "image": {
+      "src": "assets/django_project.png",
+      "alt": "django-project",
+      "classes": "w-full h-32 object-contain bg-gray-900 p-4 rounded-t-lg"
+    },
+    "bodyClasses": "p-6 flex flex-col flex-grow justify-between",
+    "contentClasses": "",
+    "titleClasses": "text-xl font-semibold text-yellow-400 mb-2",
+    "descriptionClasses": "text-gray-300 text-sm",
+    "titleKey": 21,
+    "descriptionKey": 22,
+    "actionsClasses": "mt-4 flex gap-2",
+    "links": [
+      {
+        "href": "https://github.com/Shamslux/Data-Engineering-AI-Solutions/blob/main/PageTurnerShamsluxDjangoNinjaProject/PageTurnerDjangoNinjaAPI.md",
+        "target": "_blank",
+        "classes": "inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200",
+        "icon": "folder-open",
+        "iconClasses": "w-5 h-5",
+        "labelKey": 23
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "outerClasses": "bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col",
+    "image": {
+      "src": "assets/anac.png",
+      "alt": "anac-project",
+      "classes": "w-full h-32 object-contain bg-gray-900 p-4 rounded-t-lg"
+    },
+    "bodyClasses": "p-6 flex flex-col flex-grow justify-between",
+    "contentClasses": "",
+    "titleClasses": "text-xl font-semibold text-yellow-400 mb-2",
+    "descriptionClasses": "text-gray-300 text-sm",
+    "titleKey": 24,
+    "descriptionKey": 25,
+    "actionsClasses": "mt-4 flex gap-2",
+    "links": [
+      {
+        "href": "https://github.com/Shamslux/DataEngineering/blob/main/ANAC-data-engineering-project/ANAC-data-engineering-project.md",
+        "target": "_blank",
+        "classes": "inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200",
+        "icon": "folder-open",
+        "iconClasses": "w-5 h-5",
+        "labelKey": 26
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "outerClasses": "bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col",
+    "image": {
+      "src": "assets/recruitment.svg",
+      "alt": "i-hate-tech-interviews",
+      "classes": "w-full h-32 object-contain bg-gray-900 p-4 rounded-t-lg"
+    },
+    "bodyClasses": "p-6 flex flex-col flex-grow justify-between",
+    "contentClasses": "",
+    "titleClasses": "text-xl font-semibold text-yellow-400 mb-2",
+    "descriptionClasses": "text-gray-300 text-sm",
+    "titleKey": 27,
+    "descriptionKey": 28,
+    "actionsClasses": "mt-4 flex gap-2",
+    "links": [
+      {
+        "href": "https://github.com/Shamslux/Data-Engineering-AI-Solutions/tree/main/IHateTechReview",
+        "target": "_blank",
+        "classes": "inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200",
+        "icon": "folder-open",
+        "iconClasses": "w-5 h-5",
+        "labelKey": 29
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "outerClasses": "bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col",
+    "image": {
+      "src": "assets/dbt-icon-filled-256.png",
+      "alt": "dbt-project",
+      "classes": "w-full h-32 object-contain bg-gray-900 p-4"
+    },
+    "bodyClasses": "p-6 flex flex-col flex-grow justify-between",
+    "contentClasses": "",
+    "titleClasses": "text-xl font-semibold text-yellow-400 mb-2",
+    "descriptionClasses": "text-gray-300 text-sm",
+    "titleKey": 30,
+    "descriptionKey": 31,
+    "actionsClasses": "mt-4 flex gap-2",
+    "links": [
+      {
+        "href": "https://github.com/Shamslux/DataEngineering/blob/main/dbt-pokemon-project/pokemon-dbt-testing-project.md",
+        "target": "_blank",
+        "classes": "inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200",
+        "icon": "book-open",
+        "iconClasses": "w-5 h-5",
+        "labelKey": 32
+      },
+      {
+        "href": "https://github.com/Shamslux/DataEngineering/tree/main/dbt-pokemon-project",
+        "target": "_blank",
+        "classes": "inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200",
+        "icon": "folder-open",
+        "iconClasses": "w-5 h-5",
+        "labelKey": 33
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "outerClasses": "bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col",
+    "image": {
+      "src": "assets/hadoop-original.svg",
+      "alt": "hive-impala-course",
+      "classes": "w-full h-32 object-contain bg-gray-900 p-4 rounded-t-lg"
+    },
+    "bodyClasses": "p-6 flex flex-col flex-grow justify-between",
+    "contentClasses": "",
+    "titleClasses": "text-xl font-semibold text-yellow-400 mb-2",
+    "descriptionClasses": "text-gray-300 text-sm",
+    "titleKey": 34,
+    "descriptionKey": 35,
+    "actionsClasses": "mt-4 flex gap-2",
+    "links": [
+      {
+        "href": "https://github.com/Shamslux/DataEngineering/blob/main/Hive_Impala/Hive%20and%20Impala.md",
+        "target": "_blank",
+        "classes": "inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200",
+        "icon": "book-open",
+        "iconClasses": "w-5 h-5",
+        "labelKey": 36
+      },
+      {
+        "href": "https://github.com/Shamslux/DataEngineering/tree/main/Hive_Impala/Scripts",
+        "target": "_blank",
+        "classes": "inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200",
+        "icon": "code-2",
+        "iconClasses": "w-5 h-5",
+        "labelKey": 37
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "outerClasses": "bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col",
+    "image": {
+      "src": "assets/microsoftsqlserver-original.svg",
+      "alt": "advanced-sql-server-course",
+      "classes": "w-full h-32 object-contain bg-gray-900 p-4 rounded-t-lg"
+    },
+    "bodyClasses": "p-6 flex flex-col flex-grow justify-between",
+    "contentClasses": "",
+    "titleClasses": "text-xl font-semibold text-yellow-400 mb-2",
+    "descriptionClasses": "text-gray-300 text-sm",
+    "titleKey": 38,
+    "descriptionKey": 39,
+    "actionsClasses": "mt-4 flex gap-2",
+    "links": [
+      {
+        "href": "https://github.com/Shamslux/SQL_Server_Masterclass_for_Data_Analysis/blob/main/README.md",
+        "target": "_blank",
+        "classes": "inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200",
+        "icon": "book-open",
+        "iconClasses": "w-5 h-5",
+        "labelKey": 40
+      },
+      {
+        "href": "https://github.com/Shamslux/SQL_Server_Masterclass_for_Data_Analysis/tree/main/Codes",
+        "target": "_blank",
+        "classes": "inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200",
+        "icon": "code-2",
+        "iconClasses": "w-5 h-5",
+        "labelKey": 41
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "outerClasses": "bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col",
+    "image": {
+      "src": "https://img.icons8.com/dotty/80/FFFFFF/project.png",
+      "alt": "palmeira-vale",
+      "classes": "w-full h-32 object-contain bg-gray-900 p-4 rounded-t-lg"
+    },
+    "bodyClasses": "p-6 flex flex-col flex-grow justify-between",
+    "contentClasses": "",
+    "titleClasses": "text-xl font-semibold text-yellow-400 mb-2",
+    "descriptionClasses": "text-gray-300 text-sm",
+    "titleKey": 42,
+    "descriptionKey": 43,
+    "actionsClasses": "mt-4 flex gap-2",
+    "links": [
+      {
+        "href": "https://github.com/Shamslux/Palmeira-do-Vale-s-Project/blob/main/README.md",
+        "target": "_blank",
+        "classes": "inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200",
+        "icon": "book-open",
+        "iconClasses": "w-5 h-5",
+        "labelKey": 44
+      },
+      {
+        "href": "https://github.com/Shamslux/Palmeira-do-Vale-s-Project/tree/main",
+        "target": "_blank",
+        "classes": "inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200",
+        "icon": "folder-open",
+        "iconClasses": "w-5 h-5",
+        "labelKey": 45
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "outerClasses": "bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col",
+    "image": {
+      "src": "https://img.icons8.com/dotty/80/FFFFFF/project.png",
+      "alt": "ellas-eshop",
+      "classes": "w-full h-32 object-contain bg-gray-900 p-4 rounded-t-lg"
+    },
+    "bodyClasses": "p-6 flex flex-col flex-grow justify-between",
+    "contentClasses": "",
+    "titleClasses": "text-xl font-semibold text-yellow-400 mb-2",
+    "descriptionClasses": "text-gray-300 text-sm",
+    "titleKey": 46,
+    "descriptionKey": 47,
+    "actionsClasses": "mt-4 flex gap-2",
+    "links": [
+      {
+        "href": "https://github.com/Shamslux/Ellas_Shoe_EShop/blob/main/README.md",
+        "target": "_blank",
+        "classes": "inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200",
+        "icon": "book-open",
+        "iconClasses": "w-5 h-5",
+        "labelKey": 49
+      },
+      {
+        "href": "https://github.com/Shamslux/SQL_Server_Masterclass_for_Data_Analysis/tree/main/Codes",
+        "target": "_blank",
+        "classes": "inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200",
+        "icon": "folder-open",
+        "iconClasses": "w-5 h-5",
+        "labelKey": 50
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "outerClasses": "bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col",
+    "image": {
+      "src": "https://img.icons8.com/quill/100/FFFFFF/combo-chart.png",
+      "alt": "budget-thumbail",
+      "classes": "w-full h-32 object-contain bg-gray-900 p-4 rounded-t-lg"
+    },
+    "bodyClasses": "p-6 flex flex-col flex-grow justify-between",
+    "contentClasses": "",
+    "titleClasses": "text-xl font-semibold text-yellow-400 mb-2",
+    "descriptionClasses": "text-gray-300 text-sm",
+    "titleKey": 51,
+    "descriptionKey": 52,
+    "actionsClasses": "mt-4 flex gap-2",
+    "links": [
+      {
+        "href": "https://github.com/Shamslux/Budget-Management",
+        "target": "_blank",
+        "classes": "inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200",
+        "icon": "folder-open",
+        "iconClasses": "w-5 h-5",
+        "labelKey": 53
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "outerClasses": "bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col",
+    "image": {
+      "src": "assets/python-original.svg",
+      "alt": "python-ibge-thumbail",
+      "classes": "w-full h-32 object-contain bg-gray-900 p-4 rounded-t-lg"
+    },
+    "bodyClasses": "p-6 flex flex-col flex-grow justify-between",
+    "contentClasses": "",
+    "titleClasses": "text-xl font-semibold text-yellow-400 mb-2",
+    "descriptionClasses": "text-gray-300 text-sm",
+    "titleKey": 54,
+    "descriptionKey": 55,
+    "actionsClasses": "mt-4 flex gap-2",
+    "links": [
+      {
+        "href": "https://github.com/Shamslux/python_projects/blob/main/scripts/script_1_extracting_data_from_ibge.py",
+        "target": "_blank",
+        "classes": "inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200",
+        "icon": "file-code-2",
+        "iconClasses": "w-5 h-5",
+        "labelKey": 56
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "outerClasses": "bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col",
+    "image": {
+      "src": "assets/dio-github-thumbail.webp",
+      "alt": "dio-github-thumbail",
+      "classes": "w-full h-32 object-contain bg-gray-900 p-4 rounded-t-lg"
+    },
+    "bodyClasses": "p-6 flex flex-col flex-grow justify-between",
+    "contentClasses": "",
+    "titleClasses": "text-xl font-semibold text-yellow-400 mb-2",
+    "descriptionClasses": "text-gray-300 text-sm",
+    "titleKey": 57,
+    "descriptionKey": 58,
+    "actionsClasses": "mt-4 flex gap-2",
+    "links": [
+      {
+        "href": "https://github.com/Shamslux/DataEngineering/blob/main/DIO-GitHub-Certification-Formation/DIO-GitHub-Certification-Formation.md",
+        "target": "_blank",
+        "classes": "inline-flex items-center gap-2 px-3 py-1 text-sm text-yellow-300 border border-gray-600 rounded-md bg-gray-800 hover:bg-yellow-600 hover:text-white transition-all duration-200",
+        "icon": "book-open",
+        "iconClasses": "w-5 h-5",
+        "labelKey": 59
+      }
+    ]
+  }
+]

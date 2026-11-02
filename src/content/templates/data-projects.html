@@ -1,0 +1,154 @@
+@@TV_TEXT_0@@
+<html class="dark" lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>@@TV_TEXT_1@@</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="assets/css/style.css" rel="stylesheet"/>
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+<!-- Navbar -->
+@@TV_NAV@@
+<!-- Data Projects Section - Tailwind Version -->
+<section class="text-center py-16 px-4">
+<div class="max-w-4xl mx-auto">
+<h1 class="text-4xl font-bold text-yellow-400 mb-4">@@TV_TEXT_15@@</h1>
+<p class="text-gray-300 text-lg">
+      @@TV_TEXT_16@@
+    </p>
+<div class="mt-6">
+<a class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-yellow-500 hover:bg-yellow-600 rounded transition" href="https://github.com/Shamslux?tab=repositories" target="_blank">
+<i class="w-5 h-5 text-yellow-400" data-lucide="github"></i> @@TV_TEXT_17@@
+      </a>
+</div>
+</div>
+</section>
+<section class="bg-gray-900 py-12">
+<div class="max-w-7xl mx-auto px-4 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<!-- Card Component -->
+@@TV_CARD_0@@
+<!-- Card Component -->
+@@TV_CARD_1@@
+<!-- Card Component -->
+@@TV_CARD_2@@
+<!-- Card Component -->
+@@TV_CARD_3@@
+<!-- Card Component -->
+@@TV_CARD_4@@
+<!-- Card Component -->
+@@TV_CARD_5@@
+<!-- Card Component -->
+@@TV_CARD_6@@
+<!-- Card Component -->
+@@TV_CARD_7@@
+<!-- Card Component -->
+@@TV_CARD_8@@
+<!-- Card Component -->
+@@TV_CARD_9@@
+<!-- Card Component -->
+@@TV_CARD_10@@
+<!-- Card Component -->
+@@TV_CARD_11@@
+</div>
+</section>
+<!-- Footer Section -->
+@@TV_FOOTER@@
+<!-- Footer Section Ends Here -->
+<!-- Lucide Scripts Section -->
+<script>
+  lucide.createIcons();
+</script>
+<!-- Lucide Scripts Section Ends Here -->
+<!-- JS Scripts Section -->
+<script>
+  // Tooltips para os ícones de tecnologia
+  document.querySelectorAll('.tool-icon').forEach(icon => {
+    const tooltip = document.createElement('div');
+    tooltip.innerText = icon.dataset.label;
+    tooltip.className = 'absolute bg-yellow-600 bg-opacity-30 backdrop-blur-sm text-yellow-300 text-xs px-2 py-1 rounded-lg shadow-lg transition-opacity duration-300 opacity-0 pointer-events-none';
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'relative group inline-block';
+    icon.parentNode.insertBefore(wrapper, icon);
+    wrapper.appendChild(icon);
+    wrapper.appendChild(tooltip);
+
+    wrapper.addEventListener('mouseenter', () => {
+      tooltip.classList.add('opacity-100');
+      tooltip.style.bottom = icon.offsetHeight + 8 + 'px';
+      tooltip.style.left = '50%';
+      tooltip.style.transform = 'translateX(-50%)';
+    });
+    wrapper.addEventListener('mouseleave', () => {
+      tooltip.classList.remove('opacity-100');
+    });
+  });
+
+  // Tooltips para as bandeirinhas
+  document.querySelectorAll('.flag-icon').forEach(icon => {
+    if (!icon.dataset.label) return;
+
+    const tooltip = document.createElement('div');
+    tooltip.innerText = icon.dataset.label;
+    tooltip.className = 'absolute bg-yellow-600 bg-opacity-30 backdrop-blur-sm text-yellow-300 text-xs px-2 py-1 rounded-lg shadow-lg transition-opacity duration-300 opacity-0 pointer-events-none';
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'relative group inline-block';
+    icon.parentNode.insertBefore(wrapper, icon);
+    wrapper.appendChild(icon);
+    wrapper.appendChild(tooltip);
+
+    wrapper.addEventListener('mouseenter', () => {
+      tooltip.classList.add('opacity-100');
+      tooltip.style.bottom = icon.offsetHeight + 8 + 'px';
+      tooltip.style.left = '50%';
+      tooltip.style.transform = 'translateX(-50%)';
+    });
+    wrapper.addEventListener('mouseleave', () => {
+      tooltip.classList.remove('opacity-100');
+    });
+  });
+</script>
+<script>
+  (function () {
+    const btn = document.getElementById('navToggle');
+    const desktopMenu = document.getElementById('navMenu');
+    const mobileMenu = document.getElementById('navMenuMobile');
+
+    // Garante estado inicial correto
+    desktopMenu.classList.add('hidden'); // escondido em < md
+    if (window.matchMedia('(min-width: 768px)').matches) {
+      desktopMenu.classList.remove('hidden'); // visível em md+
+      mobileMenu.classList.add('hidden');
+    }
+
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Fecha o menu ao clicar em um link no mobile
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Sincroniza ao redimensionar (ex.: girar o celular)
+    window.addEventListener('resize', () => {
+      if (window.matchMedia('(min-width: 768px)').matches) {
+        desktopMenu.classList.remove('hidden');
+        mobileMenu.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        desktopMenu.classList.add('hidden');
+      }
+    });
+  })();
+</script>
+</body>
+</html>

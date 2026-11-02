@@ -1,0 +1,197 @@
+@@TV_TEXT_0@@
+<html class="dark" lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>@@TV_TEXT_1@@</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="assets/css/style.css" rel="stylesheet"/>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+<!-- Navbar -->
+@@TV_NAV@@
+<!-- Hero Section with Animated GIF IMG as Background -->
+<div class="relative text-center mb-10 h-[32rem] flex items-center justify-center overflow-hidden rounded-lg shadow-lg">
+<!-- Real GIF (not background-image) -->
+<img alt="AI Animation Background" class="bg-gif-animated" src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3dnlheXowaHFoa2ZucGdnYnJvZmV5dDZ1MThnZm42OXQxNGN3YmFjMSZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/NXEuPHCOiJujANVznL/giphy.gif"/>
+<!-- Hero Content -->
+<div class="relative z-10 px-4">
+<h1 class="text-4xl sm:text-5xl font-bold text-yellow-400">@@TV_TEXT_15@@</h1>
+<p class="mt-2 text-lg text-gray-100">@@TV_TEXT_16@@</p>
+<p class="mt-4 max-w-xl mx-auto text-gray-200">
+        @@TV_TEXT_17@@
+      </p>
+</div>
+</div>
+
+<!-- Libro Tradukisto: featured project (user-initiated modal, no automatic popup) -->
+<section aria-labelledby="libro-feature-title" class="max-w-5xl mx-auto px-4 sm:px-6 mb-12">
+  <div class="rounded-xl border border-gray-700 hover:border-yellow-500/50 transition-colors bg-gray-800/80 shadow-lg p-6 sm:p-8">
+    <p class="text-sm font-semibold tracking-wider text-yellow-400 mb-3">@@TV_TEXT_21@@</p>
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+      <div class="max-w-2xl">
+        <h2 id="libro-feature-title" class="text-2xl sm:text-3xl font-bold text-white mb-3">Libro Tradukisto</h2>
+        <p class="text-gray-300 leading-relaxed">@@TV_TEXT_22@@</p>
+        <div class="flex flex-wrap gap-2 mt-4 text-xs text-gray-300">
+          <span class="border border-gray-600 rounded-full px-3 py-1">Desktop</span>
+          <span class="border border-gray-600 rounded-full px-3 py-1">EPUB</span>
+          <span class="border border-gray-600 rounded-full px-3 py-1">Open Source</span>
+        </div>
+      </div>
+      <div class="flex flex-col gap-3 sm:min-w-48">
+        <a href="https://github.com/Shamslux/libro-tradukisto/releases/latest" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-lg bg-yellow-400 px-5 py-3 text-gray-950 font-semibold hover:bg-yellow-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-400">@@TV_TEXT_24@@</a>
+        <button type="button" id="libro-open" aria-haspopup="dialog" aria-controls="libro-dialog" class="rounded-lg border border-gray-500 px-5 py-3 font-semibold text-gray-100 hover:border-yellow-400 hover:text-yellow-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-400">@@TV_TEXT_23@@</button>
+      </div>
+    </div>
+  </div>
+</section>
+<div id="libro-dialog" role="dialog" aria-modal="true" aria-labelledby="libro-dialog-title" aria-describedby="libro-dialog-desc" aria-hidden="true" hidden class="fixed inset-0 z-50 items-center justify-center p-4 bg-black/80">
+  <div data-libro-panel class="w-full max-w-lg rounded-xl border border-gray-600 bg-gray-800 p-6 sm:p-8 shadow-2xl max-h-[90vh] overflow-y-auto" tabindex="-1">
+    <div class="flex justify-between items-start gap-4 mb-4">
+      <h2 id="libro-dialog-title" class="text-2xl font-bold text-yellow-400">@@TV_TEXT_26@@</h2>
+      <button type="button" id="libro-close" aria-label="@@TV_ATTR_libroClose@@" class="text-gray-200 hover:text-yellow-400 text-2xl leading-none rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-yellow-400">&times;</button>
+    </div>
+    <p id="libro-dialog-desc" class="text-gray-200 leading-relaxed mb-6">@@TV_TEXT_27@@</p>
+    <div class="flex flex-wrap gap-3">
+      <a href="https://github.com/Shamslux/libro-tradukisto/releases/latest" target="_blank" rel="noopener noreferrer" class="rounded-lg bg-yellow-400 px-4 py-2 text-gray-950 font-semibold hover:bg-yellow-300">@@TV_TEXT_24@@</a>
+      <a href="https://github.com/Shamslux/libro-tradukisto" target="_blank" rel="noopener noreferrer" class="rounded-lg border border-gray-500 px-4 py-2 text-gray-100 hover:border-yellow-400">@@TV_TEXT_28@@</a>
+      <button type="button" id="libro-dismiss" class="rounded-lg border border-gray-500 px-4 py-2 text-gray-100 hover:border-yellow-400">@@TV_TEXT_29@@</button>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  const openButton = document.getElementById('libro-open');
+  const dialog = document.getElementById('libro-dialog');
+  const panel = dialog?.querySelector('[data-libro-panel]');
+  const closeButton = document.getElementById('libro-close');
+  const dismissButton = document.getElementById('libro-dismiss');
+  if (!openButton || !dialog || !panel || !closeButton || !dismissButton) return;
+  let previousFocus = null;
+  let previousOverflow = '';
+  const focusables = () => Array.from(dialog.querySelectorAll('a[href],button:not([disabled])'));
+  function closeDialog() {
+    dialog.hidden = true;
+    dialog.style.display = 'none';
+    dialog.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = previousOverflow;
+    (previousFocus || openButton).focus();
+  }
+  openButton.addEventListener('click', () => {
+    previousFocus = document.activeElement;
+    previousOverflow = document.body.style.overflow;
+    dialog.hidden = false;
+    dialog.style.display = 'flex';
+    dialog.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    closeButton.focus();
+  });
+  closeButton.addEventListener('click', closeDialog);
+  dismissButton.addEventListener('click', closeDialog);
+  dialog.addEventListener('click', event => { if (event.target === dialog) closeDialog(); });
+  dialog.addEventListener('keydown', event => {
+    if (event.key === 'Escape') { event.preventDefault(); closeDialog(); }
+    if (event.key !== 'Tab') return;
+    const items = focusables();
+    if (!items.length) { event.preventDefault(); panel.focus(); return; }
+    const first = items[0], last = items[items.length - 1];
+    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+  });
+})();
+</script>
+
+<!-- Footer Section -->
+@@TV_FOOTER@@
+<!-- Footer Section Ends Here -->
+<!-- JS Scripts Section -->
+<script>
+  // Tooltips para os ícones de tecnologia
+  document.querySelectorAll('.tool-icon').forEach(icon => {
+    const tooltip = document.createElement('div');
+    tooltip.innerText = icon.dataset.label;
+    tooltip.className = 'absolute bg-yellow-600 bg-opacity-30 backdrop-blur-sm text-yellow-300 text-xs px-2 py-1 rounded-lg shadow-lg transition-opacity duration-300 opacity-0 pointer-events-none';
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'relative group inline-block';
+    icon.parentNode.insertBefore(wrapper, icon);
+    wrapper.appendChild(icon);
+    wrapper.appendChild(tooltip);
+
+    wrapper.addEventListener('mouseenter', () => {
+      tooltip.classList.add('opacity-100');
+      tooltip.style.bottom = icon.offsetHeight + 8 + 'px';
+      tooltip.style.left = '50%';
+      tooltip.style.transform = 'translateX(-50%)';
+    });
+    wrapper.addEventListener('mouseleave', () => {
+      tooltip.classList.remove('opacity-100');
+    });
+  });
+
+  // Tooltips para as bandeirinhas
+  document.querySelectorAll('.flag-icon').forEach(icon => {
+    if (!icon.dataset.label) return;
+
+    const tooltip = document.createElement('div');
+    tooltip.innerText = icon.dataset.label;
+    tooltip.className = 'absolute bg-yellow-600 bg-opacity-30 backdrop-blur-sm text-yellow-300 text-xs px-2 py-1 rounded-lg shadow-lg transition-opacity duration-300 opacity-0 pointer-events-none';
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'relative group inline-block';
+    icon.parentNode.insertBefore(wrapper, icon);
+    wrapper.appendChild(icon);
+    wrapper.appendChild(tooltip);
+
+    wrapper.addEventListener('mouseenter', () => {
+      tooltip.classList.add('opacity-100');
+      tooltip.style.bottom = icon.offsetHeight + 8 + 'px';
+      tooltip.style.left = '50%';
+      tooltip.style.transform = 'translateX(-50%)';
+    });
+    wrapper.addEventListener('mouseleave', () => {
+      tooltip.classList.remove('opacity-100');
+    });
+  });
+</script>
+<script>
+  (function () {
+    const btn = document.getElementById('navToggle');
+    const desktopMenu = document.getElementById('navMenu');
+    const mobileMenu = document.getElementById('navMenuMobile');
+
+    // Garante estado inicial correto
+    desktopMenu.classList.add('hidden'); // escondido em < md
+    if (window.matchMedia('(min-width: 768px)').matches) {
+      desktopMenu.classList.remove('hidden'); // visível em md+
+      mobileMenu.classList.add('hidden');
+    }
+
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Fecha o menu ao clicar em um link no mobile
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Sincroniza ao redimensionar (ex.: girar o celular)
+    window.addEventListener('resize', () => {
+      if (window.matchMedia('(min-width: 768px)').matches) {
+        desktopMenu.classList.remove('hidden');
+        mobileMenu.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        desktopMenu.classList.add('hidden');
+      }
+    });
+  })();
+</script>
+</body>
+</html>
